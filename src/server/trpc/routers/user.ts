@@ -8,7 +8,7 @@ export const userRouter = router({
                 name: z.string()
             })
         )
-        .query(({ input }) => {
+        .query(({ input }): { id: string; name: string } => {
             return { id: input.id, name: input.name }
         })
 })
